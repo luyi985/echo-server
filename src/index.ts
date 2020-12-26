@@ -9,9 +9,6 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(`/${controller}`, echoController);
 
-// app.listen(port, hostName, () => {
-//     console.log(`server is starting at`, { port, hostName });
-// });
-app.listen(port, '', () => {
+app.listen(port, hostName, () => {
     console.log(`server is starting at`, { port, hostName });
 });
