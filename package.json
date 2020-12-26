@@ -7,7 +7,9 @@
     "test": "jest",
     "start": "ts-node src/index.ts",
     "dev": "nodemon --inspect src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "docker": "docker rmi echo-server && npm run build && docker build -t echo-server .",
+    "prod": "node ./dist/index.js"
   },
   "repository": {
     "type": "git",

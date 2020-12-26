@@ -8,6 +8,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(`/${controller}`, echoController);
-app.listen(port, hostName, () => {
+
+// app.listen(port, hostName, () => {
+//     console.log(`server is starting at`, { port, hostName });
+// });
+app.listen(port, '', () => {
     console.log(`server is starting at`, { port, hostName });
 });
