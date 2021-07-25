@@ -3,8 +3,9 @@ RUN mkdir /app
 ENV PORT 3000
 WORKDIR /app
 COPY dist ./dist
-COPY .env .
-COPY package.json .
+COPY src ./src
+ADD .env ./
+ADD *.json ./
 RUN npm install
-EXPOSE ${PORT}
+EXPOSE $PORT
 CMD npm run prod
